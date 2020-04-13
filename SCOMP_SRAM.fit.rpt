@@ -1,5 +1,5 @@
 Fitter report for SCOMP_SRAM
-Sun Apr 05 15:49:25 2020
+Mon Apr 13 18:03:24 2020
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Sun Apr 05 15:49:25 2020        ;
+; Fitter Status                      ; Successful - Mon Apr 13 18:03:24 2020        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; SCOMP_SRAM                                   ;
 ; Top-level Entity Name              ; SCOMP_SRAM                                   ;
@@ -1079,27 +1079,27 @@ Note: User assignments will override these defaults. The user specified values a
 ; Compilation Hierarchy Node                 ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                               ; Library Name ;
 +--------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
 ; |SCOMP_SRAM                                ; 1496 (30)   ; 220 (0)                   ; 0 (0)         ; 32768       ; 8    ; 0            ; 0       ; 0         ; 43   ; 0            ; 1276 (30)    ; 17 (0)            ; 203 (2)          ; |SCOMP_SRAM                                                                       ; work         ;
-;    |CHIP_EMULATOR:inst4|                   ; 932 (932)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 916 (916)    ; 0 (0)             ; 16 (16)          ; |SCOMP_SRAM|CHIP_EMULATOR:inst4                                                   ; work         ;
+;    |CHIP_EMULATOR:inst4|                   ; 932 (932)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 916 (916)    ; 0 (0)             ; 16 (16)          ; |SCOMP_SRAM|CHIP_EMULATOR:inst4                                                   ;              ;
 ;    |IO_DECODER:inst3|                      ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; |SCOMP_SRAM|IO_DECODER:inst3                                                      ;              ;
-;    |SCOMP:inst|                            ; 506 (410)   ; 183 (183)                 ; 0 (0)         ; 32768       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 307 (227)    ; 15 (15)           ; 184 (165)        ; |SCOMP_SRAM|SCOMP:inst                                                            ;              ;
+;    |SCOMP:inst|                            ; 506 (410)   ; 183 (183)                 ; 0 (0)         ; 32768       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 307 (227)    ; 15 (15)           ; 184 (165)        ; |SCOMP_SRAM|SCOMP:inst                                                            ; work         ;
 ;       |altsyncram:MEMORY|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32768       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |SCOMP_SRAM|SCOMP:inst|altsyncram:MEMORY                                          ; work         ;
-;          |altsyncram_mut3:auto_generated|  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32768       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |SCOMP_SRAM|SCOMP:inst|altsyncram:MEMORY|altsyncram_mut3:auto_generated           ;              ;
-;       |lpm_bustri:IO_BUS|                  ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |SCOMP_SRAM|SCOMP:inst|lpm_bustri:IO_BUS                                          ; work         ;
+;          |altsyncram_mut3:auto_generated|  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32768       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |SCOMP_SRAM|SCOMP:inst|altsyncram:MEMORY|altsyncram_mut3:auto_generated           ; work         ;
+;       |lpm_bustri:IO_BUS|                  ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |SCOMP_SRAM|SCOMP:inst|lpm_bustri:IO_BUS                                          ;              ;
 ;       |lpm_clshift:SHIFTER|                ; 83 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 80 (0)       ; 0 (0)             ; 3 (0)            ; |SCOMP_SRAM|SCOMP:inst|lpm_clshift:SHIFTER                                        ; work         ;
-;          |lpm_clshift_fuc:auto_generated|  ; 83 (83)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 80 (80)      ; 0 (0)             ; 3 (3)            ; |SCOMP_SRAM|SCOMP:inst|lpm_clshift:SHIFTER|lpm_clshift_fuc:auto_generated         ; work         ;
+;          |lpm_clshift_fuc:auto_generated|  ; 83 (83)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 80 (80)      ; 0 (0)             ; 3 (3)            ; |SCOMP_SRAM|SCOMP:inst|lpm_clshift:SHIFTER|lpm_clshift_fuc:auto_generated         ;              ;
 ;    |SLOW_SRAM:inst2|                       ; 56 (5)      ; 37 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (5)       ; 2 (0)             ; 35 (0)           ; |SCOMP_SRAM|SLOW_SRAM:inst2                                                       ;              ;
-;       |lpm_bustri_oe0:inst61|              ; 15 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 1 (0)            ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_bustri_oe0:inst61                                 ;              ;
+;       |lpm_bustri_oe0:inst61|              ; 15 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 1 (0)            ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_bustri_oe0:inst61                                 ; work         ;
 ;          |lpm_bustri:lpm_bustri_component| ; 15 (15)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 1 (1)            ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_bustri_oe0:inst61|lpm_bustri:lpm_bustri_component ; work         ;
-;       |lpm_ff0:inst79|                     ; 16 (0)      ; 16 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_ff0:inst79                                        ;              ;
+;       |lpm_ff0:inst79|                     ; 16 (0)      ; 16 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_ff0:inst79                                        ; work         ;
 ;          |lpm_ff:lpm_ff_component|         ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_ff0:inst79|lpm_ff:lpm_ff_component                ; work         ;
 ;       |lpm_ff0:inst80|                     ; 16 (0)      ; 16 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (0)           ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_ff0:inst80                                        ; work         ;
 ;          |lpm_ff:lpm_ff_component|         ; 16 (16)     ; 16 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 16 (16)          ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_ff0:inst80|lpm_ff:lpm_ff_component                ; work         ;
-;       |lpm_ff1:inst81|                     ; 2 (0)       ; 2 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (0)             ; 0 (0)            ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_ff1:inst81                                        ;              ;
+;       |lpm_ff1:inst81|                     ; 2 (0)       ; 2 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (0)             ; 0 (0)            ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_ff1:inst81                                        ; work         ;
 ;          |lpm_ff:lpm_ff_component|         ; 2 (2)       ; 2 (2)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 2 (2)             ; 0 (0)            ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_ff1:inst81|lpm_ff:lpm_ff_component                ; work         ;
 ;       |lpm_ff1:inst82|                     ; 3 (0)       ; 3 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_ff1:inst82                                        ; work         ;
 ;          |lpm_ff:lpm_ff_component|         ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |SCOMP_SRAM|SLOW_SRAM:inst2|lpm_ff1:inst82|lpm_ff:lpm_ff_component                ; work         ;
-;    |altpll0:inst1|                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |SCOMP_SRAM|altpll0:inst1                                                         ; work         ;
-;       |altpll:altpll_component|            ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |SCOMP_SRAM|altpll0:inst1|altpll:altpll_component                                 ; work         ;
+;    |altpll0:inst1|                         ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |SCOMP_SRAM|altpll0:inst1                                                         ;              ;
+;       |altpll:altpll_component|            ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |SCOMP_SRAM|altpll0:inst1|altpll:altpll_component                                 ;              ;
 +--------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+-----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1524,7 +1524,7 @@ This will disable optimization of problematic paths and expose them for further 
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Sun Apr 05 15:49:18 2020
+    Info: Processing started: Mon Apr 13 18:03:17 2020
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off SCOMP_SRAM -c SCOMP_SRAM
 Info: Selected device EP2C35F672C6 for design "SCOMP_SRAM"
 Info: Low junction temperature is 0 degrees C
@@ -1715,8 +1715,8 @@ Info: Design uses memory blocks. Violating setup or hold times of memory block a
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 315 megabytes
-    Info: Processing ended: Sun Apr 05 15:49:26 2020
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:09
+    Info: Processing ended: Mon Apr 13 18:03:24 2020
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:08
 
 
