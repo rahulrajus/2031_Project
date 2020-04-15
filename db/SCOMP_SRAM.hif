@@ -1384,8 +1384,8 @@ DATA0
 3
 }
 # hierarchies {
-SRAM:inst9|lpm_bustri:IO_BUS
-SRAM:inst9|lpm_bustri:IO_SRAM
+SRAM:inst10|lpm_bustri:IO_BUS
+SRAM:inst10|lpm_bustri:IO_SRAM
 SCOMP:inst|lpm_bustri:IO_BUS
 }
 # macro_sequence
@@ -3376,6 +3376,26 @@ SCOMP:inst|altsyncram:MEMORY
 
 # end
 # entity
+SCOMP_SRAM
+# storage
+db|SCOMP_SRAM.(0).cnf
+db|SCOMP_SRAM.(0).cnf
+# case_insensitive
+# source_file
+scomp_sram.bdf
+3d8dcdbd73bebe917535234c38a264a1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
 SRAM
 # storage
 db|SCOMP_SRAM.(18).cnf
@@ -3387,7 +3407,7 @@ ON
 # case_insensitive
 # source_file
 sram.vhd
-8faeeb16d318f6d3e7d025afb1a2cd1
+23f2984b59bc36a8e85fca7af822323
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -3400,7 +3420,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-SRAM:inst9
+SRAM:inst10
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -3561,26 +3581,6 @@ ba68998794efc8399ef9d9561fe6dea7
 }
 # hierarchies {
 SCOMP:inst|altsyncram:MEMORY|altsyncram_bdt3:auto_generated
-}
-# macro_sequence
-
-# end
-# entity
-SCOMP_SRAM
-# storage
-db|SCOMP_SRAM.(0).cnf
-db|SCOMP_SRAM.(0).cnf
-# case_insensitive
-# source_file
-scomp_sram.bdf
-5c6c7ce61d9047e684bb885ad7ea1adb
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
 }
 # macro_sequence
 

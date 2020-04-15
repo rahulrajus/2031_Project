@@ -66,6 +66,13 @@ applicable agreement for further details.
 		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
+		(pt 0 128)
+		(input)
+		(text "IO_CYCLE" (rect 0 0 55 12)(font "Arial" ))
+		(text "IO_CYCLE" (rect 21 123 76 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
 		(pt 248 48)
 		(output)
 		(text "SRAM_ADDR[17..0]" (rect 0 0 100 12)(font "Arial" ))

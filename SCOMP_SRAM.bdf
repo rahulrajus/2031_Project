@@ -736,7 +736,7 @@ applicable agreement for further details.
 (symbol
 	(rect 424 392 672 584)
 	(text "SRAM" (rect 5 0 35 12)(font "Arial" ))
-	(text "inst9" (rect 8 176 31 188)(font "Arial" ))
+	(text "inst10" (rect 8 176 37 188)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -778,6 +778,13 @@ applicable agreement for further details.
 		(text "SRAM_DATA_EN" (rect 0 0 86 12)(font "Arial" ))
 		(text "SRAM_DATA_EN" (rect 21 107 107 119)(font "Arial" ))
 		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "IO_CYCLE" (rect 0 0 55 12)(font "Arial" ))
+		(text "IO_CYCLE" (rect 21 123 76 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
 	)
 	(port
 		(pt 248 48)
@@ -1063,11 +1070,6 @@ applicable agreement for further details.
 	(pt 424 504)
 )
 (connector
-	(text "clk_scomp" (rect 354 408 407 420)(font "Arial" ))
-	(pt 424 424)
-	(pt 344 424)
-)
-(connector
 	(text "reset_n_int" (rect 354 424 408 436)(font "Arial" ))
 	(pt 424 440)
 	(pt 344 440)
@@ -1076,6 +1078,21 @@ applicable agreement for further details.
 	(text "sram_ctrl_en" (rect 280 936 343 948)(font "Arial" ))
 	(pt 280 952)
 	(pt 352 952)
+)
+(connector
+	(text "clk_sram" (rect 506 80 550 92)(font "Arial" ))
+	(pt 496 96)
+	(pt 608 96)
+)
+(connector
+	(text "io_cycle" (rect 354 504 395 516)(font "Arial" ))
+	(pt 424 520)
+	(pt 344 520)
+)
+(connector
+	(text "clk_scomp" (rect 354 408 407 420)(font "Arial" ))
+	(pt 424 424)
+	(pt 344 424)
 )
 (junction (pt 800 472))
 (junction (pt 768 456))
