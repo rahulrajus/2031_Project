@@ -100,12 +100,12 @@ ARCHITECTURE a of SRAM IS
 			  END CASE;
 			WHEN WRITE_DATA =>
 			  SRAM_DATA <= IO_DATA;
-			  SRAM_WE_N <= '0';
+			  SRAM_WE_N <= '1';
 			  IO_DATA_INT <= '1';
-			  CASE SRAM_MODE IS
-				WHEN "1001" => STATE <= WRITE_DATA;
-				WHEN OTHERS => STATE <= IDLE;
-			  END CASE;
+			  STATE <= WRITE_DATA2;
+			WHEN WRITE_DATA2 =>
+				SRAM_WE_N <= '0';
+				STATE <= IDLE;
 			WHEN OTHERS =>
 			  STATE <=IDLE;
           END CASE;

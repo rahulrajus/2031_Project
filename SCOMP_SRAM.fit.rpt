@@ -1,5 +1,5 @@
 Fitter report for SCOMP_SRAM
-Wed Apr 15 12:56:06 2020
+Wed Apr 15 13:11:10 2020
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Wed Apr 15 12:56:06 2020        ;
+; Fitter Status                      ; Successful - Wed Apr 15 13:11:10 2020        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; SCOMP_SRAM                                   ;
 ; Top-level Entity Name              ; SCOMP_SRAM                                   ;
@@ -1088,7 +1088,7 @@ Note: User assignments will override these defaults. The user specified values a
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                       ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------------------------------------------------------------+--------------+
 ; |SCOMP_SRAM                               ; 1503 (31)   ; 224 (0)                   ; 0 (0)         ; 32768       ; 8    ; 0            ; 0       ; 0         ; 52   ; 0            ; 1279 (31)    ; 15 (0)            ; 209 (1)          ; |SCOMP_SRAM                                                               ; work         ;
-;    |CHIP_EMULATOR:inst4|                  ; 930 (930)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 922 (922)    ; 0 (0)             ; 8 (8)            ; |SCOMP_SRAM|CHIP_EMULATOR:inst4                                           ; work         ;
+;    |CHIP_EMULATOR:inst4|                  ; 930 (930)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 922 (922)    ; 0 (0)             ; 8 (8)            ; |SCOMP_SRAM|CHIP_EMULATOR:inst4                                           ;              ;
 ;    |IO_DECODER:inst3|                     ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; |SCOMP_SRAM|IO_DECODER:inst3                                              ;              ;
 ;    |SCOMP:inst|                           ; 508 (412)   ; 183 (183)                 ; 0 (0)         ; 32768       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 309 (229)    ; 13 (13)           ; 186 (167)        ; |SCOMP_SRAM|SCOMP:inst                                                    ; work         ;
 ;       |altsyncram:MEMORY|                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 32768       ; 8    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |SCOMP_SRAM|SCOMP:inst|altsyncram:MEMORY                                  ; work         ;
@@ -1523,7 +1523,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Apr 15 12:55:58 2020
+    Info: Processing started: Wed Apr 15 13:11:03 2020
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off SCOMP_SRAM -c SCOMP_SRAM
 Info: Selected device EP2C35F672C6 for design "SCOMP_SRAM"
 Info: Low junction temperature is 0 degrees C
@@ -1649,7 +1649,7 @@ Info: I/O bank details before I/O pin placement
         Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  58 pins available
         Info: I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  58 pins available
         Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  56 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:00
+Info: Fitter preparation operations ending: elapsed time is 00:00:01
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -1731,7 +1731,7 @@ Info: Design uses memory blocks. Violating setup or hold times of memory block a
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 315 megabytes
-    Info: Processing ended: Wed Apr 15 12:56:06 2020
+    Info: Processing ended: Wed Apr 15 13:11:11 2020
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:08
 

@@ -3396,39 +3396,6 @@ AUTO
 
 # end
 # entity
-SRAM
-# storage
-db|SCOMP_SRAM.(18).cnf
-db|SCOMP_SRAM.(18).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-sram.vhd
-23f2984b59bc36a8e85fca7af822323
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-SRAM:inst10
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 altsyncram_bdt3
 # storage
 db|SCOMP_SRAM.(20).cnf
@@ -3582,6 +3549,39 @@ ba68998794efc8399ef9d9561fe6dea7
 # hierarchies {
 SCOMP:inst|altsyncram:MEMORY|altsyncram_bdt3:auto_generated
 }
+# macro_sequence
+
+# end
+# entity
+SRAM
+# storage
+db|SCOMP_SRAM.(18).cnf
+db|SCOMP_SRAM.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+sram.vhd
+f38174d05c34ebae76a259d141ce905f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+SRAM:inst10
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
