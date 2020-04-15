@@ -30,12 +30,45 @@ END SRAM;
 
 ARCHITECTURE a of SRAM IS
   TYPE STATE_TYPE IS (
-	IDLE, SET_HIGH, SET_LOW, GET_DATA, READ_DATA, WRITE1, WRITE2
+	IDLE, WRITE_DATA, READ_DATA, SET_HIGH, SET_LOW
   );
-  SIGNAL STATE     : STATE_TYPE;
-  SIGNAL SRAM_DATA : STD_LOGIC_VECTOR(15 DOWNTO 0);
-  SIGNAL SRAM_MODE : STD_LOGIC_VECTOR(3 DOWNTO 0);
+  SIGNAL STATE       : STATE_TYPE;
+  SIGNAL SRAM_DATA   : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  SIGNAL SRAM_MODE   : STD_LOGIC_VECTOR(3 DOWNTO 0);
+  SIGNAL IO_SRAM_INT : STD_LOGIC;
+  SIGNAL IO_DATA_INT : STD_LOGIC;
+  
   BEGIN
+	--Combined Mode Vector  
+    SRAM_MODE <= IO_WRITE & SRAM_ADHI_EN & SRAM_ADLOW_EN & SRAM_DATA_EN;
+    --Constants
+    SRAM_CE_N <= '0';
+    SRAM_UB_N <= '0';
+	SRAM_LB_N <= '0';
+	--Always driving SRAM_DQ unless WE
+	SRAM_OE_N <= '0';
+	--SRAM_DQ to IO_BUS
+	IO_BUS: LPM_BUSTRI
+	GENERIC MAP (
+		lpm_width => 16
+	)
+	PORT MAP (
+		data     => SRAM_DQ,
+		enabledt => IO_SRAM_INT,
+		tridata  => IO_DATA
+	);
+	--SRAM_DATA to SRAM_DQ
+	IO_SRAM: LPM_BUSTRI
+	GENERIC MAP (
+		lpm_width => 16
+	)
+	PORT MAP (
+		data     => SRAM_DATA,
+		enabledt => IO_DATA_INT,
+		tridata  => SRAM_DQ
+	);
+
+	--State machine
     PROCESS(CLOCK, RESETN)
       BEGIN
         IF RESETN = '0' THEN
@@ -44,59 +77,41 @@ ARCHITECTURE a of SRAM IS
 		  CASE STATE IS
             WHEN IDLE =>
               SRAM_WE_N <= '1';
-              IO_DATA   <= "ZZZZZZZZZZZZZZZZ";
+              IO_DATA_INT <= '0';
+              IO_SRAM_INT <= '0';
 			  CASE SRAM_MODE IS
 				WHEN "1100" => STATE <= SET_HIGH;
 				WHEN "1010" => STATE <= SET_LOW;
 				WHEN "0001" => STATE <= READ_DATA;
-				WHEN "1001" => STATE <= WRITE1;
+				WHEN "1001" => STATE <= WRITE_DATA;
 				WHEN OTHERS => STATE <= IDLE;
 			  END CASE;
 			WHEN SET_HIGH =>
 			  SRAM_ADDR(17 DOWNTO 16) <= IO_DATA(1 DOWNTO 0);
 			  CASE SRAM_MODE IS
 				WHEN "1100" => STATE <= SET_HIGH;
-				WHEN OTHERS => STATE <= GET_DATA;
+				WHEN OTHERS => STATE <= IDLE;
 			  END CASE;
 			WHEN SET_LOW =>
 			  SRAM_ADDR(15 DOWNTO 0) <= IO_DATA(15 DOWNTO 0);
 			  CASE SRAM_MODE IS
-				WHEN "1010" => STATE <= SET_HIGH;
-				WHEN OTHERS => STATE <= GET_DATA;
+				WHEN "1010" => STATE <= SET_LOW;
+				WHEN OTHERS => STATE <= IDLE;
 			  END CASE;
-			WHEN GET_DATA =>
-			  SRAM_DATA <= SRAM_DQ;
-			  STATE <= IDLE;
 			WHEN READ_DATA =>
-			  IO_DATA <= SRAM_DATA;
+			  IO_SRAM_INT <= '1';
 			  CASE SRAM_MODE IS
 				WHEN "0001" => STATE <= READ_DATA;
 				WHEN OTHERS => STATE <= IDLE;
 			  END CASE;
-			WHEN WRITE1 =>
+			WHEN WRITE_DATA =>
 			  SRAM_DATA <= IO_DATA;
-			  SRAM_DQ   <= SRAM_DATA;
-			  CASE SRAM_MODE IS
-				WHEN "1001" => STATE <= WRITE1;
-				WHEN OTHERS => STATE <= WRITE2;
-			  END CASE;
-			WHEN WRITE2 =>
 			  SRAM_WE_N <= '0';
-			  SRAM_DQ   <= SRAM_DATA;
+			  IO_DATA_INT <= '1';
 			  STATE <= IDLE;
 			WHEN OTHERS =>
 			  STATE <=IDLE;
           END CASE;
         END IF;
       END PROCESS;
-    --Combined Mode Vector  
-    SRAM_MODE <= IO_WRITE & SRAM_ADHI_EN & SRAM_ADLOW_EN & SRAM_DATA_EN;
-    --Constants
-    SRAM_CE_N <= '0';
-    SRAM_UB_N <= '0';
-	SRAM_LB_N <= '0';
-	--Always avaliable read unless WE is active
-	SRAM_OE_N <= '0';
-	
-
   END a;
